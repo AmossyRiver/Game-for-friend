@@ -4041,10 +4041,10 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Spritefont2,
 		C3.Plugins.System.Cnds.OnLoadComplete,
 		C3.Plugins.System.Acts.GoToLayout,
-		C3.Plugins.Audio.Acts.Play,
 		C3.Plugins.Button.Cnds.OnClicked,
 		C3.Plugins.Button.Acts.Destroy,
 		C3.Plugins.System.Cnds.OnLayoutStart,
+		C3.Plugins.Audio.Acts.Play,
 		C3.Plugins.Sprite.Cnds.OnCollision,
 		C3.Plugins.Sprite.Acts.Destroy,
 		C3.Plugins.Sprite.Acts.AddInstanceVar,
@@ -4055,7 +4055,9 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Sprite.Acts.SetCollisions,
 		C3.Plugins.System.Acts.NextPrevLayout,
 		C3.Plugins.Sprite.Cnds.IsOutsideLayout,
-		C3.Plugins.System.Acts.RestartLayout
+		C3.Plugins.System.Acts.RestartLayout,
+		C3.Plugins.Audio.Acts.StopAll,
+		C3.Behaviors.solid.Acts.SetEnabled
 	];
 };
 self.C3_JsPropNameTable = [
@@ -4073,7 +4075,14 @@ self.C3_JsPropNameTable = [
 	{backgrond: 0},
 	{Button: 0},
 	{SpriteFont: 0},
-	{Win: 0}
+	{Win: 0},
+	{TempCloud: 0},
+	{Sprite: 0},
+	{Sprite2: 0},
+	{Button2: 0},
+	{Sprite3: 0},
+	{Sprite4: 0},
+	{Temp2Cloud: 0}
 ];
 }
 
@@ -4174,9 +4183,11 @@ function or(l, r)
 }
 
 self.C3_ExpressionFuncs = [
+		() => -5,
 		() => 0,
 		() => "",
 		() => 1,
+		() => 5,
 		() => 3
 ];
 
